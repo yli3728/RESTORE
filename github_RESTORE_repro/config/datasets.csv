@@ -1,0 +1,4 @@
+dataset,lambda,k_rank,n_clusters,max_iter,init_source,pca_rule
+lung,1.0,18,5,200,fixed_labels_from_preliminary_analysis,Horn_parallel_analysis_q95
+brain,0.5,23,5,200,fixed_labels_from_preliminary_analysis,Horn_parallel_analysis_q95
+

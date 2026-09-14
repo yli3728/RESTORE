@@ -1,0 +1,2 @@
+"dataset","lambda","kappa0","k_rank","max_iter","initialization_file"
+"brain",0.5,0.8,23,200,"brain_state.rds"
