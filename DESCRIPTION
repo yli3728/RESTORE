@@ -1,0 +1,7 @@
+Package: TMDSPRepro
+Type: Project
+Title: Reproducible T-MDSP Simulations and Clustering
+Version: 1.0.0
+Encoding: UTF-8
+Imports: Matrix, aricode, irlba
+

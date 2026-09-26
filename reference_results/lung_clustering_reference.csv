@@ -1,0 +1,2 @@
+"dataset","lambda","PCA_dim","PCA_rule","PC_normalization_before_kmeans","ARI","NMI"
+"lung",1,6,"Horn parallel analysis, permutation q95","column_zscore",0.933356987176763,0.905202163757349
