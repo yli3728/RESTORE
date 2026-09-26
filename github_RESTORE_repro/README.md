@@ -8,13 +8,6 @@ RESTORE reconstructs sparse single-cell DNA methylomes while retaining the biolo
 
 This repository contains the R implementation and reproducibility materials for RESTORE: two 40%-missing simulation studies, lung and brain single-cell methylation analyses, fixed initialization states, reference results, and verification scripts. For the real datasets, RESTORE reconstructs a region-by-cell methylation-probability matrix and then evaluates cell structure using Horn parallel analysis, PCA, k-means clustering, adjusted Rand index (ARI), and normalized mutual information (NMI).
 
-The adaptive penalty is shared by every dataset:
-
-```text
-kappa_ij(lambda) = kappa0 * ((1 - lambda) + lambda * w_ij)
-```
-
-The lung analysis uses `lambda = 1` (fully adaptive), whereas the brain analysis uses `lambda = 0.5` (half fixed and half adaptive). These are dataset-specific configurations of the same RESTORE model, not different algorithms.
 
 ## Workflow
 
