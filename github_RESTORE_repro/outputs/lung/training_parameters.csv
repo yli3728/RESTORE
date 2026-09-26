@@ -1,2 +1,0 @@
-"dataset","lambda","kappa0","k_rank","max_iter","initialization_file"
-"lung",1,0.8,18,200,"lung_state.rds"

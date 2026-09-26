@@ -1,2 +1,0 @@
-"dataset","lambda","PCA_dim","PCA_rule","ARI","NMI"
-"brain",0.5,5,"Horn parallel analysis, permutation q95",0.970342936886482,0.942809506224597
