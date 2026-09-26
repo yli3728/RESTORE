@@ -55,10 +55,10 @@ The observed methylation proportion is `methy / cov` wherever `cov > 0`. Dataset
 
 The included datasets are:
 
-| Dataset | Coverage | Methylated reads | Cells | RESTORE setting |
-|---|---|---|---:|---|
-| Lung | `data/real/LG_ACCPU_5kb_573cell_cov.rds` | `data/real/LG_ACCPU_5kb_573cell_methy.rds` | 573 | `lambda = 1`, rank 18 |
-| Brain | `data/real/M1C_H1930001_5kb_542cell_cov.rds` | `data/real/M1C_H1930001_5kb_542cell_methy.rds` | 542 | `lambda = 0.5`, rank 23 |
+| Dataset | Coverage | Methylated reads | Cells |
+|---|---|---|---:|
+| Lung | `data/real/LG_ACCPU_5kb_573cell_cov.rds` | `data/real/LG_ACCPU_5kb_573cell_methy.rds` | 573 | 
+| Brain | `data/real/M1C_H1930001_5kb_542cell_cov.rds` | `data/real/M1C_H1930001_5kb_542cell_methy.rds` | 542 | 
 
 ### Simulation input
 
