@@ -8,14 +8,6 @@ RESTORE reconstructs sparse single-cell DNA methylomes while retaining the biolo
 
 This repository contains the R implementation and reproducibility materials for RESTORE: two 40%-missing simulation studies, lung and brain single-cell methylation analyses, fixed initialization states, reference results, and verification scripts. For the real datasets, RESTORE reconstructs a region-by-cell methylation-probability matrix and then evaluates cell structure using Horn parallel analysis, PCA, k-means clustering, adjusted Rand index (ARI), and normalized mutual information (NMI).
 
-The adaptive penalty is shared by every dataset:
-
-```text
-kappa_ij(lambda) = kappa0 * ((1 - lambda) + lambda * w_ij)
-```
-
-The lung analysis uses `lambda = 1` (fully adaptive), whereas the brain analysis uses `lambda = 0.5` (half fixed and half adaptive). These are dataset-specific configurations of the same RESTORE model, not different algorithms.
-
 ## Workflow
 
 1. Prepare matched region-by-cell methylated-read and coverage matrices.
@@ -62,11 +54,10 @@ The observed methylation proportion is `methy / cov` wherever `cov > 0`. Dataset
 
 The included datasets are:
 
-| Dataset | Coverage | Methylated reads | Cells | RESTORE setting |
-|---|---|---|---:|---|
-| Lung | `data/real/LG_ACCPU_5kb_573cell_cov.rds` | `data/real/LG_ACCPU_5kb_573cell_methy.rds` | 573 | `lambda = 1`, rank 18 |
-| Brain | `data/real/M1C_H1930001_5kb_542cell_cov.rds` | `data/real/M1C_H1930001_5kb_542cell_methy.rds` | 542 | `lambda = 0.5`, rank 23 |
-
+| Dataset | Coverage | Methylated reads | Cells | 
+|---|---|---|---:|
+| Lung | `data/real/LG_ACCPU_5kb_573cell_cov.rds` | `data/real/LG_ACCPU_5kb_573cell_methy.rds` | 573 | 
+| Brain | `data/real/M1C_H1930001_5kb_542cell_cov.rds` | `data/real/M1C_H1930001_5kb_542cell_methy.rds` | 542 | 
 ### Simulation input
 
 The simulation workflows use a true methylation-probability matrix, coverage information, cell labels, and replicate-specific masks with exactly 40% missing entries. The observed matrix is passed to RESTORE; the truth at held-out entries is used only for reconstruction evaluation.
